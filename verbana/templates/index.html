@@ -12,7 +12,7 @@
 
 {% block body %}
 <div id="wrapper">
-    <div id="header">
+    <div id="header" class="row-fluid">
         <div id="logo">
             <!-- TODO: Make a real logo picture -->
             <div id="logo-text">
@@ -21,41 +21,64 @@
         </div>
         <nav id="navigation" role="navigation">
             <ul>
-                <li class="left">
-                    <a href="#listen" title="listen" data-trigger="scroll" class="hover-link hover-link-white">Listen<span class="hover-line"></span></a>
-                </li>
-                <li class="right">
-                    <a href="#connect" title="connect" data-trigger="scroll" class="hover-link hover-link-white">Connect<span class="hover-line"></span></a>
-                </li>
+                <li class="">
+                    <a href="#listen" title="listen" data-trigger="scroll" class="hover-link hover-link-white">Listen<span class="hover-line"></span></a><!--
+             --></li>
+                <li class="">
+                    <a href="#about" title="about" data-trigger="scroll" class="hover-link hover-link-white">About<span class="hover-line"></span></a><!--
+             --></li>
+                <li class="">
+                    <a href="#connect" title="connect" data-trigger="scroll" class="hover-link hover-link-white">Connect<span class="hover-line"></span></a><!--
+             --></li>
             </ul>
         </nav>
         <div id="slideshow">
             <div class="slide" style="background-image: url({{ STATIC_URL }}images/slide01.jpg);"></div>
         </div>
     </div> <!-- end div "header" -->
-    <div id="main" role="main">
-        <h2 class="title" id="listen">Listen</h2>
-        <div id="songs">
-            {% with 'SONG_ID_LIST'|get_settings_value as song_id_list %}
-            {% for song in song_id_list %}
-            <div class="song-block">
-                <iframe width="100%" height="120" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{ song }}&amp;color=262b45&amp;auto_play=false&amp;show_artwork=true&amp;font=Julius%20Sans%20One"></iframe>
+    <div id="main" class="row-fluid" role="main">
+        <div id="left-container">
+            <div id="listen-container" class="col-md-6">
+                <h2 class="title" id="listen">Listen</h2>
+                <div id="songs">
+                    {% with 'SONG_ID_LIST'|get_settings_value as song_id_list %}
+                    {% for song in song_id_list %}
+                    <div class="song-block">
+                        <iframe width="100%" height="120" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{ song }}&amp;color=262b45&amp;auto_play=false&amp;show_artwork=true&amp;font=Julius%20Sans%20One"></iframe>
+                    </div>
+                    {% endfor %}
+                    {% endwith %}
+                </div>
             </div>
-            {% endfor %}
-            {% endwith %}
         </div>
-        <h2 class="title" id="connect">Connect</h2>
-        <ul id="connect-links">
-            <li>
-                <a href="http://soundcloud.com/verbana" title="soundcloud" class="hover-link" target="_blank">Soundcloud<span class="hover-line"></span></a>
-            </li >
-            <li>
-                <a href="http://twitter.com/atsutaskforce" title="twitter" class="hover-link" target="_blank">Twitter<span class="hover-line"></span></a>
-            </li>
-        </ul>
+        <div id="right-container" class="row-fluid">
+            <div id="about-container" class="col-md-6">
+                <h2 class="title" id="about">About</h2>
+                <p id="about-text">
+Lorem ipsum dolor sit amet, ei qui ignota eirmod recusabo. Ex duo tantas nonumy consequuntur, graeci fastidii periculis has te. Ea commodo perpetua eum, utamur laboramus quo et, ad mel ludus volumus. Ea qui iisque rationibus.
+                </p>
+                <p id="about-text">
+At enim civibus definitionem per, ius ad dicam dicunt quodsi. Illum graece accommodare vix te. No propriae iudicabit per, persius volumus ne vis. Eu soluta gubergren vituperata vis.
+                </p>
+            </div>
+            <div id="connect-container" class="col-md-6">
+                <h2 class="title" id="connect">Connect</h2>
+                <ul id="connect-links">
+                    <li>
+                        <a href="http://soundcloud.com/verbana" title="soundcloud" class="hover-link" target="_blank">Soundcloud<span class="hover-line"></span></a>
+                    </li >
+                    <li>
+                        <a href="http://twitter.com/atsutaskforce" title="twitter" class="hover-link" target="_blank">Twitter<span class="hover-line"></span></a>
+                    </li>
+                    <li>
+                        <a href="http://verbana.bandcamp.com" title="tumblr" class="hover-link" target="_blank">Bandcamp<span class="hover-line"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div><!-- end div "main" -->
-    <div class=footer>
-        <hr/>
+    <div id="footer" class="row-fluid">
+        <hr class="style-eight"/>
         <p id="copyright">&#169; 2013 VERBANA. ALL RIGHTS RESERVED.</p>
     </div><!-- end div "footer" -->
 </div> <!-- end div "wrapper" -->

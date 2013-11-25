@@ -14,9 +14,9 @@ $( document ).ready(function() {
     $('body').flowtype({
          minimum   : 400,
          maximum   : 1200,
-         minFont   : 14,
+         minFont   : 12,
          maxFont   : 60,
-         fontRatio : 65,
+         fontRatio : 70,
          lineRatio : 1.6,
     });
 });
