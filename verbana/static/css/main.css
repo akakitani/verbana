@@ -14,22 +14,10 @@ a {
 }
 
 
-
 h1,h2,h3,h4,h5,h6,p {
      font-family: inherit;
      font-size: inherit;
 }
-/*
-h1 {
-    z-index: 10;
-    text-align: center;
-    font-family: 'Julius Sans One', 'Helvetica', 'Arial', sans-serif;
-    font-weight: 400;
-    font-size: 9.375em;
-    color: #ffffff;
-    text-transform: uppercase;
-}
-*/
 
 h2 {
     display: block;
@@ -40,6 +28,13 @@ h2 {
     -webkit-margin-end: 0;
     font-weight: bold;
     text-align: center;
+}
+
+hr {
+    border: 3px double #262b45;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 html {
@@ -213,8 +208,6 @@ body {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    padding: 10;
-    border: 10;
     width: 50%;
     text-align: center;
 }
@@ -225,4 +218,23 @@ body {
     margin-bottom: 5px;
     color: #262b45;
     font-size: 2.000em;
+}
+
+#footer {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#copyright {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 0.800em;
+}
+
+#copyright p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
