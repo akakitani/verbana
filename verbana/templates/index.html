@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% load staticfiles %}
+{% load base_templatetags %}
 
 {% block css %}
 <link rel="stylesheet" href="{{ STATIC_URL }}css/main.css">
@@ -35,7 +36,24 @@
     </div> <!-- end div "header" -->
     <div id="main" role="main">
         <h2 class="title" id="listen">Listen</h2>
+        <div id="songs">
+            {% with 'SONG_ID_LIST'|get_settings_value as song_id_list %}
+            {% for song in song_id_list %}
+            <div class="song-block">
+                <iframe width="100%" height="120" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{ song }}&amp;color=262b45&amp;auto_play=false&amp;show_artwork=true&amp;font=Julius%20Sans%20One"></iframe>
+            </div>
+            {% endfor %}
+            {% endwith %}
+        </div>
         <h2 class="title" id="connect">Connect</h2>
+        <ul id="connect-links">
+            <li>
+                <a href="http://soundcloud.com/verbana" title="soundcloud" class="hover-link" target="_blank">Soundcloud<span class="hover-line"></span></a>
+            </li >
+            <li>
+                <a href="http://twitter.com/atsutaskforce" title="twitter" class="hover-link" target="_blank">Twitter<span class="hover-line"></span></a>
+            </li>
+        </ul>
     </div><!-- end div "main" -->
 </div> <!-- end div "wrapper" -->
 {% endblock %}

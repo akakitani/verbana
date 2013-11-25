@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'verbana.base',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -112,4 +113,16 @@ STATICFILES_FINDERS = (
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
+)
+
+# Content settings
+SONG_ID_LIST = (
+    # Yellow Yesterday
+    '115076851',
+    # Marvin's Room
+    '104068880',
+    # Damiana
+    '67852812',
+    # Board N Brew
+    '54888233',
 )

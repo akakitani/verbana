@@ -1,5 +1,8 @@
+
 ol, ul {
     list-style: none;
+    padding: 0;
+    border: 0;
 }
 
 a {
@@ -54,7 +57,7 @@ body {
 }
 
 .hover-link-white .hover-line {
-    background-color: #ffffff;
+    background-color: #000000;
 }
 
 .hover-link .hover-line {
@@ -64,7 +67,7 @@ body {
     left: 50%;
     width: 0;
     height: 1px;
-    background-color: #25223E;
+    background-color: #000000;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
@@ -89,6 +92,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     font-size: 1.563em;
+    color: #ffffff;
     /*
     background-position: -358px -253px;
     */
@@ -161,4 +165,36 @@ body {
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 4px;
+}
+
+#songs {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#songs .song-block {
+    position: relative;
+    padding: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+
+#connect-links ul, li {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    border: 0;
+    width: 50%;
+    text-align: center;
+}
+
+#connect-links a {
+    position: relative;
+    padding: 0;
+    border: 0;
+    color: #262b45;
+    font-size: 2.000em;
 }
