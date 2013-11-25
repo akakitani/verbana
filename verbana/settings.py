@@ -24,6 +24,14 @@ DEBUG = True
 TEMPLATE_DEBUG = True
 ALLOWED_HOSTS = []
 
+SETTINGS_PATH = os.path.dirname(os.path.realpath(__file__))
+
+ADMINS = (
+    # ('Your Name', 'your_email@example.com'),
+)
+
+MANAGERS = ADMINS
+
 
 # Application definition
 INSTALLED_APPS = (
@@ -33,7 +41,6 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'verbana.base',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -49,6 +56,19 @@ ROOT_URLCONF = 'verbana.urls'
 
 WSGI_APPLICATION = 'verbana.wsgi.application'
 
+TEMPLATE_DIRS = (
+    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
+    os.path.join(SETTINGS_PATH, 'templates'),
+)
+
+# List of callables that know how to import templates from various sources.
+TEMPLATE_LOADERS = (
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
+    #'django.template.loaders.eggs.Loader',
+)
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
@@ -83,6 +103,12 @@ ALLOWED_HOSTS = ['*']
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+)
+
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
