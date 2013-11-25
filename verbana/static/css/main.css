@@ -1,3 +1,6 @@
+* {
+    margin: 0;
+}
 
 ol, ul {
     list-style: none;
@@ -10,13 +13,31 @@ a {
     text-decoration: none;
 }
 
+
+
+h1,h2,h3,h4,h5,h6,p {
+     font-family: inherit;
+     font-size: inherit;
+}
+/*
+h1 {
+    z-index: 10;
+    text-align: center;
+    font-family: 'Julius Sans One', 'Helvetica', 'Arial', sans-serif;
+    font-weight: 400;
+    font-size: 9.375em;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+*/
+
 h2 {
     display: block;
-    font-size: 4.000em;
+    font-size: 3.500em;
     -webkit-margin-before: 0.83em;
     -webkit-margin-after: 0.83em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
     font-weight: bold;
     text-align: center;
 }
@@ -56,10 +77,6 @@ body {
     position: relative;
 }
 
-.hover-link-white .hover-line {
-    background-color: #000000;
-}
-
 .hover-link .hover-line {
     display: block;
     position: absolute;
@@ -67,12 +84,21 @@ body {
     left: 50%;
     width: 0;
     height: 1px;
-    background-color: #000000;
+    background-color: #262b45;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     -webkit-transform: translatez(0);
+}
+
+.hover-link:hover .hover-line{
+    width:100%;
+    left:0;
+}
+
+.hover-link-white .hover-line {
+    background-color: #ffffff;
 }
 
 #header {
@@ -125,7 +151,7 @@ body {
     text-align: center;
     font-family: 'Julius Sans One', 'Helvetica', 'Arial', sans-serif;
     font-weight: 400;
-    font-size: 9.375em;
+    font-size: 6.000em;
     color: #ffffff;
     text-transform: uppercase;
 }
@@ -159,9 +185,10 @@ body {
 }
 
 #main .title {
+    margin-top: 28px;
     margin-bottom: 28px;
     font-size: 4.000em;
-    color: #000000;
+    color: #262b45;
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 4px;
@@ -185,16 +212,16 @@ body {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    padding: 0;
-    border: 0;
+    padding: 10;
+    border: 10;
     width: 50%;
     text-align: center;
 }
 
 #connect-links a {
     position: relative;
-    padding: 0;
-    border: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
     color: #262b45;
     font-size: 2.000em;
 }
