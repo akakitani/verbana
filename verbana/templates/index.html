@@ -13,10 +13,6 @@
 {% block body %}
 <div id="wrapper">
     <div id="header" class="row-fluid">
-        <div id="logo">
-            <!-- <div id="logo-text"><h1>Verbana</h1></div> -->
-            <img id="logo-image" class="img-responsive" alt="verbana" src="{{ STATIC_URL }}images/Verbana-Logo.png" / >
-        </div>
         <nav id="navigation" class="cl-effect-4" role="navigation">
             <ul>
                <li><a href="#listen" data-trigger="scroll" class="hover-link-white ">Listen</a></li>
@@ -24,6 +20,10 @@
                <li><a href="#connect" data-trigger="scroll" class="hover-link-white ">Connect</a></li>
             </ul>
         </nav>
+        <div id="logo">
+            <!-- <div id="logo-text"><h1>Verbana</h1></div> -->
+            <img id="logo-image" class="img-responsive" alt="verbana" src="{{ STATIC_URL }}images/Verbana-Logo.png" / >
+        </div>
         <div id="slideshow">
             <div class="slide" style="background-image: url({{ STATIC_URL }}images/slide01.jpg);"></div>
         </div>
