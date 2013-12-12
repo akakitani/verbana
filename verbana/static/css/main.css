@@ -77,34 +77,6 @@ body {
     float: right;
 }
 
-.hover-link {
-    position: relative;
-}
-
-.hover-link .hover-line {
-    display: block;
-    position: absolute;
-    top: 48%;
-    left: 50%;
-    width: 0;
-    height: 1px;
-    background-color: #262b45;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-    -webkit-transform: translatez(0);
-}
-
-.hover-link:hover .hover-line{
-    width:100%;
-    left:0;
-}
-
-.hover-link-white .hover-line {
-    background-color: #ffffff;
-}
-
 #header {
     position: relative;
     z-index: 2;
@@ -121,9 +93,23 @@ body {
     padding-top: 0px;
     font-size: 1.750em;
     color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
     /*
     background-position: -358px -253px;
     */
+}
+
+#navigation a {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#navigation a::after {
+    background-color: #ffffff;
 }
 
 #navigation ul {
@@ -134,14 +120,10 @@ body {
 }
 
 #navigation li {
+    width: 100%;
     position: relative;
     text-align: center;
     display: table-cell;
-}
-
-#navigation a {
-    margin-left: 5px;
-    margin-right: 5px;
 }
 
 #logo {
@@ -274,6 +256,8 @@ body {
     text-align: center;
     margin-top: 1em;
     margin-bottom: 1em;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
 }
 
 #connect-links a {
@@ -309,4 +293,50 @@ body {
     margin-left: auto;
     margin-right: auto;
     font-size: 0.800em;
+}
+
+*,
+*:after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.cl-effect-4 a {
+    padding: 0 0 3px;
+}
+
+.cl-effect-4 a::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #262b45;
+    content: '';
+    opacity: 0;
+    -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+    -moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
+    transition: height 0.3s, opacity 0.3s, transform 0.3s;
+    -webkit-transform: translateY(-3px);
+    -moz-transform: translateY(-3px);
+    transform: translateY(-3px);
+}
+
+.cl-effect-4 a:hover::after,
+.cl-effect-4 a:focus::after {
+    height: 3px;
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    transform: translateY(0px);
+}
+
+.hover-link {
+    position: relative;
+}
+
+.hover-link-white .hover-line {
+    background-color: #ffffff;
 }
