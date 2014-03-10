@@ -36,7 +36,7 @@
                     {% with 'SONG_ID_LIST'|get_settings_value as song_id_list %}
                     {% for song in song_id_list %}
                     <div class="song-block">
-                        <iframe width="100%" height="120" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{ song }}&amp;color=000000&amp;auto_play=false&amp;show_artwork=true&amp;font=Julius%20Sans%20One"></iframe>
+                        <iframe width="100%" height="20%" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{ song }}&amp;auto_play=false&amp;hide_related=false&amp;visual=true&amp;color=000000&amp;font=Julius%20Sans%20One"></iframe>
                     </div>
                     {% endfor %}
                     {% endwith %}
